@@ -54,17 +54,18 @@ def setup_and_launch():
         # Import the main app module
         import app
         
-        # The app.py file has if __name__ == "__main__" block that starts the app
-        # We need to trigger it manually since we're importing it
-        if hasattr(app, 'main'):
-            # If app.py has a main() function, call it
-            app.main()
-        else:
-            # Otherwise, execute the main block code
-            root = app.Tk()
-            root.withdraw()
-            app.login()
-            root.mainloop()
+        # Execute the main block code from app.py
+        # app.py structure: if __name__ == "__main__":
+        #     root = Tk()
+        #     root.withdraw()
+        #     login()
+        #     root.mainloop()
+        
+        from tkinter import Tk
+        root = Tk()
+        root.withdraw()
+        app.login()
+        root.mainloop()
         
         return 0
         

@@ -86,7 +86,7 @@ class ResourceManager:
         """
         Get a writable directory for the application.
         
-        On Windows, uses AppData\Local\{app_name}
+        On Windows, uses AppData\\Local\\{app_name}
         On other systems, uses ~/.{app_name}
         In development mode, uses the script directory
         
