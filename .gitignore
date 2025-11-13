@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.dist/
+*.build/
+.eggs/
+*.manifest
+*.spec
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# DeepFace Models (large files)
+deepface_models/
+.deepface/
+
+# Application Data
+face_database/
+*.csv
+*.pkl
+*.json
+logs/
+
+# Images (optional - comment out if you want to include them)
+# *.jpg
+# *.jpeg
+# *.png
+send_button.png
+background.jpg
+
+# Nuitka Build
+*.build/
+*.dist/
+*.onefile-build/
+
+# Test Reports
+validation_report.json
+validation_log.json
+test_write.txt
+test_data.csv
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Installer files
+*.exe
+*.msi
+*.zip
+
+# Compiled files
+*.pyd
+*.dll
