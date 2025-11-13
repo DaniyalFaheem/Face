@@ -2,6 +2,14 @@
 
 A comprehensive face recognition-based attendance management system with automated WhatsApp notifications and salary calculations.
 
+## 🚀 Quick Links
+
+- **[Build EXE Guide](BUILD_METHODS.md)** - Choose your build method
+- **[GitHub Actions Build](GITHUB_ACTIONS_BUILD.md)** - Build without setup
+- **[Quick Build Guide](QUICK_BUILD.md)** - All build methods
+- **[User Guide](USER_GUIDE.md)** - How to use the application
+- **[Start Here](START_HERE.md)** - Beginner guide
+
 ## Features
 
 - 🎯 Real-time face recognition using DeepFace (VGG-Face model)
