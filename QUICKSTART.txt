@@ -1,0 +1,226 @@
+Quick Start Guide
+==================
+
+Thank you for using the Face Recognition Attendance System!
+
+FIRST TIME SETUP
+----------------
+
+1. System Requirements:
+   - Windows 10 or Windows 11
+   - Webcam (for face recognition)
+   - 4GB RAM minimum
+   - 2GB free disk space
+
+2. Installation:
+   - No Python installation required
+   - Simply extract all files to a folder
+   - Keep all files together in the same folder
+
+3. Running the Application:
+   - Double-click FaceAttendanceSystem.exe
+   - Wait 10-15 seconds for first launch (loading AI models)
+   - Login screen will appear
+
+4. Default Credentials:
+   Admin Access:
+   - Username: admin
+   - Password: admin123
+
+   User Access:
+   - Username: user
+   - Password: user123
+
+GETTING STARTED
+---------------
+
+Step 1: Register Your First User
+   1. Login as admin (admin/admin123)
+   2. Click "Register New User"
+   3. Select Student or Faculty
+   4. Fill in all required information
+   5. Follow on-screen instructions to capture face images
+   6. Wait for processing (30-60 seconds)
+
+Step 2: Test Face Recognition
+   1. Stand in front of the camera
+   2. Wait for the system to recognize you (1-3 seconds)
+   3. Click "Mark Attendance" when your name appears
+   4. Check the log box at the bottom
+
+Step 3: View Attendance
+   1. Click "Manage Users" (Admin) or "View Students" (User)
+   2. Click "View Attendance Log"
+   3. Export data to CSV if needed
+
+FEATURES
+--------
+
+Admin Panel:
+- Register Students and Faculty
+- Mark attendance
+- View and delete users
+- Send WhatsApp alerts to absentees
+- Calculate faculty salaries
+- View attendance logs
+- Clear logs
+
+User Panel:
+- Register Students only
+- Mark attendance
+- View student list
+- View attendance logs
+
+TROUBLESHOOTING
+---------------
+
+Problem: Application won't start
+Solution: 
+- Run as Administrator
+- Check Windows Event Viewer for errors
+- Temporarily disable antivirus
+- Ensure all files are extracted
+
+Problem: Camera not working
+Solution:
+- Check Windows camera permissions
+- Close other apps using the camera
+- Try restarting the computer
+
+Problem: Face recognition not working
+Solution:
+- Ensure good lighting
+- Move closer to camera (2-3 feet)
+- Look directly at camera
+- Register more face samples
+
+Problem: Slow performance
+Solution:
+- Close other applications
+- Ensure good lighting
+- Wait for initial model loading (first launch)
+
+Problem: WhatsApp automation fails
+Solution:
+- Take a screenshot of WhatsApp send button
+- Save as 'send_button.png' in same folder
+- Set Windows display scaling to 100%
+- Login to WhatsApp Web in Microsoft Edge
+
+DATA LOCATION
+-------------
+
+All data is stored in:
+C:\Users\YourUsername\AppData\Local\FaceAttendanceSystem\
+
+This includes:
+- face_database\ (face images)
+- student_attendance.csv
+- faculty_attendance.csv
+- salary.csv
+- logs\
+
+You can backup this folder to preserve your data.
+
+TIPS FOR BEST RESULTS
+----------------------
+
+Face Registration:
+- Good, even lighting
+- Neutral expression
+- Look at different angles as instructed
+- Remove glasses if possible
+- Avoid shadows on face
+
+Face Recognition:
+- Same lighting conditions as registration
+- Face directly toward camera
+- Stay still for 2-3 seconds
+- System needs 4 stable frames to confirm
+
+Attendance:
+- 5-minute cooldown between logs
+- Green box = ready to mark
+- Yellow box = analyzing
+- Red box = unknown face
+
+SUPPORT
+-------
+
+For help and support:
+- Check README.txt for detailed documentation
+- Visit: https://github.com/DaniyalFaheem/Face
+- Check validation_log.json for technical details
+
+SECURITY NOTES
+--------------
+
+1. Change default passwords immediately:
+   - Edit credentials in the application
+   - Store credentials securely
+
+2. Backup your data regularly:
+   - Copy the AppData\Local\FaceAttendanceSystem folder
+   - Export CSV files regularly
+
+3. Camera privacy:
+   - Camera only activates when application is running
+   - No data is sent over the internet
+   - All processing is local
+
+ADVANCED FEATURES
+-----------------
+
+WhatsApp Notifications:
+1. Prepare send button image:
+   - Open WhatsApp Web in browser
+   - Take screenshot of send button (paper plane icon)
+   - Crop to just the button
+   - Save as 'send_button.png' in application folder
+
+2. Send alerts:
+   - Click "Alert Absentees"
+   - Select person from list
+   - Click "Send Alert"
+   - Wait for automation (15-30 seconds)
+
+Salary Calculation:
+1. Click "Calculate Faculty Salaries"
+2. Select date range
+3. System calculates based on:
+   - Regular: Monthly salary - deductions
+   - Visiting: Fixed rate or per-day rate
+4. Export to CSV for records
+
+KEYBOARD SHORTCUTS
+------------------
+
+Escape - Exit application (with confirmation)
+Enter  - Submit login credentials
+
+PERFORMANCE
+-----------
+
+First Launch: 10-15 seconds (model loading)
+Subsequent: 5-8 seconds
+Recognition: 1-3 seconds per face
+Registration: 2-3 minutes (80 images)
+
+UPDATING
+--------
+
+To update to a new version:
+1. Backup your data folder
+2. Download new version
+3. Extract to a new folder
+4. Your data will be preserved in AppData
+
+VERSION INFORMATION
+-------------------
+
+Version: 1.0.0
+Build Date: [See build_info.json]
+AI Model: VGG-Face with SSD detector
+Framework: DeepFace + TensorFlow
+
+Thank you for using Face Recognition Attendance System!

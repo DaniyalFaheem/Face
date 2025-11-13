@@ -197,6 +197,20 @@ class BuildManager:
         self.create_readme(readme_path)
         print(f"  ✓ Created: {readme_path}")
         
+        # Copy QUICKSTART.txt if exists
+        quickstart_src = self.project_root / 'QUICKSTART.txt'
+        if quickstart_src.exists():
+            quickstart_dest = self.output_dir / 'QUICKSTART.txt'
+            shutil.copy2(quickstart_src, quickstart_dest)
+            print(f"  ✓ Copied: {quickstart_dest}")
+        
+        # Copy USER_GUIDE.md if exists
+        userguide_src = self.project_root / 'USER_GUIDE.md'
+        if userguide_src.exists():
+            userguide_dest = self.output_dir / 'USER_GUIDE.md'
+            shutil.copy2(userguide_src, userguide_dest)
+            print(f"  ✓ Copied: {userguide_dest}")
+        
         # Copy LICENSE if exists
         license_src = self.project_root / 'LICENSE'
         if license_src.exists():
