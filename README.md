@@ -67,34 +67,49 @@ python app.py
 
 ## Building Standalone Executable
 
-See [BUILDING.md](BUILDING.md) for complete build instructions.
+See [QUICK_BUILD.md](QUICK_BUILD.md) for a simple guide or [BUILDING.md](BUILDING.md) for complete instructions.
 
-### Quick Build
+### Method 1: GitHub Actions (Easiest - No Setup!)
+
+1. Go to **Actions** tab on GitHub
+2. Run **"Build Executable"** workflow
+3. Download the built executable artifact
+
+### Method 2: PyInstaller (Cross-Platform)
+
+```bash
+# Install PyInstaller
+pip install pyinstaller
+
+# Build (works with Python 3.8-3.12)
+python build_pyinstaller.py --full --clean
+```
+
+Output: `dist/FaceAttendanceSystem_Package/`
+
+### Method 3: Nuitka (Windows, Optimized)
 
 ```bash
 # Windows: One-click build
 build.bat
 
-# Or manually:
+# Or manually (requires Python 3.8 exactly)
 python build.py --full
 ```
 
-This will create a standalone executable in `dist/FaceAttendanceSystem_Package/`.
+Output: `dist/FaceAttendanceSystem_Package/`
 
 ### Build Options
 
 ```bash
-# Full build with model preparation
+# PyInstaller - Full build
+python build_pyinstaller.py --full --clean
+
+# Nuitka - Full build with model preparation
 python build.py --full
 
-# Clean build
-python build.py --clean
-
 # Skip model download (use existing)
-python build.py --skip-models
-
-# Skip validation tests
-python build.py --skip-tests
+python build_pyinstaller.py --skip-models
 ```
 
 ## Architecture
