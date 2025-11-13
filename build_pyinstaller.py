@@ -26,6 +26,13 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
+# Configure stdout to use UTF-8 encoding to support Unicode characters
+# This fixes encoding issues on Windows where default encoding is cp1252
+if sys.platform == 'win32':
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 
 class PyInstallerBuilder:
     """Manages the build process using PyInstaller."""
